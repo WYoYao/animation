@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+        }
+        
+        .content>div {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .box {
+            animation: aini 5s infinite linear;
+        }
+        
+        .box1 {
+            animation: aini 5s infinite steps(1);
+        }
+        
+        @-webkit-keyframes aini {
+            /**
+                steps 中的第一个参数就是将 0% 到 25% 分成几等份（而不是将整个动画分成几等份）
+            */
+            0% {
+                background: red;
+            }
+            25%{
+                background: orange;
+            }
+            50% {
+                background: yellow;
+            }
+            75%{
+                background: green;
+            }
+            100% {
+                background: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>
